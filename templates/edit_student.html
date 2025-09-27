@@ -1,0 +1,39 @@
+<!-- templates/edit_student.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit Student</h2>
+<form method="post" enctype="multipart/form-data">
+    <label>Name:</label>
+    <input type="text" name="name" value="{{ student.name }}" required>
+
+    <label>Father Name:</label>
+    <input type="text" name="father_name" value="{{ student.father_name }}" required>
+
+    <label>Grandfather Name:</label>
+    <input type="text" name="grandfather_name" value="{{ student.grandfather_name }}" required>
+
+    <label>Department:</label>
+    <input type="text" name="department" value="{{ student.department }}" required>
+
+    <label>Year:</label>
+    <input type="text" name="year" value="{{ student.year }}" required>
+
+    <label>Student ID:</label>
+    <input type="text" name="student_id" value="{{ student.student_id }}" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" value="{{ student.email }}" required>
+
+    <label>Device Model:</label>
+    <input type="text" name="device_model" value="{{ student.device_model }}">
+
+    <label>Serial Number:</label>
+    <input type="text" name="serial_number" value="{{ student.serial_number }}">
+
+    <label>Picture:</label>
+    <input type="file" name="picture">
+
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

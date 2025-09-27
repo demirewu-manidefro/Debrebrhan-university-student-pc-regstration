@@ -1,0 +1,13 @@
+<!-- templates/verify_exit.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Verify Exit</h2>
+<form method="post">
+    <label for="student_id">Student ID:</label>
+    <input type="text" name="student_id" id="student_id" required>
+    <label for="reason">Reason (optional):</label>
+    <input type="text" name="reason" id="reason">
+    <button type="submit">Approve Exit</button>
+</form>
+{% endblock %}

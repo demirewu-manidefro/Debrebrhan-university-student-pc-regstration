@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Student Profile</h2>
+<ul>
+    <li>Name: {{ student.name }}</li>
+    <li>Father Name: {{ student.father_name }}</li>
+    <li>Grandfather Name: {{ student.grandfather_name }}</li>
+    <li>Department: {{ student.department }}</li>
+    <li>Year: {{ student.year }}</li>
+    <li>Student ID: {{ student.student_id }}</li>
+    <li>Email: {{ student.email }}</li>
+</ul>
+<a href="{{ url_for('edit_student', sid=student.id) }}">Edit Student</a>
+
+{% endblock %}

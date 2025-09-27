@@ -278,7 +278,7 @@ def register_student():
 @app.route("/students/<int:sid>/edit", methods=["GET", "POST"])
 @login_required
 def edit_student(sid):
-    student = Student.query.get_or_404(sid)
+    student = Student.query.get(sid)
     user = User.query.get(session["user_id"])
     if not (user.is_manager() or user.can_register):
         flash("You don't have permission to edit students.", "danger")
@@ -406,6 +406,13 @@ def api_get_student(student_id):
         "serial_number": s.serial_number,
         "picture_path": s.picture_path
     })
+
+from app import app
+from db import db
+
+with app.app_context():
+    db.create_all()
+    print("✅ All tables created")
 
 # ------------------------
 # Run app
