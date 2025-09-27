@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Students{% endblock %}
+
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3>Students</h3>
+<form class="form-inline" method="get" action="{{ url_for('list_students') }}">
+<input name="q" class="form-control mr-2" placeholder="Search by ID or name">
+<button class="btn btn-outline-primary">Search</button>
+</form>
+</div>
+
+
+<table class="table table-hover">
+<thead>
+<tr><th>Picture</th><th>Name</th><th>Student ID</th><th>Department</th><th>Device</th><th>Action</th></tr>
+</thead>
+<tbody>
+{% for s in students %}
+<tr>
+<td>
+{% if s.picture_path %}
+<img src="/{{ s.picture_path }}" class="avatar">
+{% else %}
+<div class="avatar bg-secondary text-white d-inline-flex align-items-center justify-content-center">N/A</div>
+{% endif %}
+</td>
+<td>{{ s.name }}<br><small class="text-muted">{{ s.father_name }} {{ s.grandfather_name }}</small></td>
+<td>{{ s.student_id }}</td>
+<td>{{ s.department }} / {{ s.year }}</td>
+<td>{{ s.device_model }}<br><small>{{ s.serial_number or '-' }}</small></td>
+<td>
+<a class="btn btn-sm btn-outline-primary" href="{{ url_for('api_get_student', student_id=s.student_id) }}">API</a>
+<a class="btn btn-sm btn-primary" href="{{ url_for('search_student') }}?student_id={{ s.student_id }}">View</a>
+{% if session.get('role') == 'manager' or session.get('role') == 'sub_manager' and user.can_register %}
+<a class="btn btn-sm btn-secondary" href="{{ url_for('edit_student', sid=s.id) }}">Edit</a>
+{% endif %}
+{% if session.get('role') == 'manager' %}
+<form method="post" action="{{ url_for('delete_student', sid=s.id) }}" style="display:inline-block" onsubmit="return confirm('Delete student?');">
+<button class="btn btn-sm btn-danger">Delete</button>
+</form>
+{% endif %}
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

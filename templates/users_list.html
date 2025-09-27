@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Users — Manager{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3>Users</h3>
+    <a class="btn btn-success" href="{{ url_for('create_sub_manager') }}">Create Sub-Manager</a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>ID</th><th>Username</th><th>Role</th><th>Permissions</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.role }}</td>
+            <td>
+                {% if u.can_register %}Register ✓{% endif %}
+                {% if u.can_verify_exit %} | Verify Exit ✓{% endif %}
+            </td>
+            <td>
+                <a class="btn btn-sm btn-primary" href="{{ url_for('edit_user', user_id=u.id) }}">Edit</a>
+                {% if not u.is_manager %}
+                <form method="post" action="{{ url_for('delete_user', user_id=u.id) }}" style="display:inline-block" onsubmit="return confirm('Delete user?');">
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Edit User{% endblock %}
+
+
+{% block content %}
+<h3>Edit {{ u.username }}</h3>
+<form method="post">
+<div class="form-check">
+<input type="checkbox" name="can_register" class="form-check-input" id="cr" {% if u.can_register %}checked{% endif %}>
+<label class="form-check-label" for="cr">Can register students</label>
+</div>
+<div class="form-check">
+<input type="checkbox" name="can_verify_exit" class="form-check-input" id="cv" {% if u.can_verify_exit %}checked{% endif %}>
+<label class="form-check-label" for="cv">Can verify exit</label>
+</div>
+<button class="btn btn-primary mt-3">Save</button>
+</form>
+{% endblock %}
