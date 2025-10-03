@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Student Profile</h2>
-<ul>
-    <li>Name: {{ student.name }}</li>
-    <li>Father Name: {{ student.father_name }}</li>
-    <li>Grandfather Name: {{ student.grandfather_name }}</li>
-    <li>Department: {{ student.department }}</li>
-    <li>Year: {{ student.year }}</li>
-    <li>Student ID: {{ student.student_id }}</li>
-    <li>Email: {{ student.email }}</li>
-</ul>
-<a href="{{ url_for('edit_student', sid=student.id) }}">Edit Student</a>
-
+<h2 class="profile-title">Student Profile</h2>
+<div class="profile-card">
+    <ul class="profile-list">
+        <li><span class="profile-label">Name:</span> {{ student.name }}</li>
+        <li><span class="profile-label">Father Name:</span> {{ student.father_name }}</li>
+        <li><span class="profile-label">Grandfather Name:</span> {{ student.grandfather_name }}</li>
+        <li><span class="profile-label">Department:</span> {{ student.department }}</li>
+        <li><span class="profile-label">Year:</span> {{ student.year }}</li>
+        <li><span class="profile-label">Student ID:</span> {{ student.student_id }}</li>
+        <li><span class="profile-label">Email:</span> {{ student.email }}</li>
+    </ul>
+    <a href="{{ url_for('edit_student', sid=student.id) }}" class="edit-button">Edit Student</a>
+</div>
 {% endblock %}

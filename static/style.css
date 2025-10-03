@@ -462,3 +462,284 @@ body {
 .btn-submit:hover {
     background: #2980b9;
 }
+/* static/css/style.css */
+
+/* Center the form */
+.exit-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    /* light gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form title */
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    /* blue */
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+/* static/css/style.css */
+
+/* Container for the form */
+.submanager-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form title */
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Checkbox container */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Checkbox input */
+.form-checkbox {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Checkbox label */
+.form-check-label {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Submit button */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    /* green */
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #218838;
+}
+/* Container for edit student form */
+.student-form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form title */
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs */
+.form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    /* green */
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #218838;
+}
+/* Container card for profile */
+.profile-card {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile title */
+.profile-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Profile list styling */
+.profile-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.profile-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Label in list */
+.profile-label {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Edit button */
+.edit-button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    /* blue */
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}

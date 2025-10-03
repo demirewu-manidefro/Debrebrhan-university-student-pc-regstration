@@ -1,26 +1,25 @@
 {% extends 'base.html' %}
 {% block title %}Create Sub-Manager{% endblock %}
 
-
 {% block content %}
-<h3>Create Sub-Manager</h3>
-<form method="post">
-<div class="form-group">
-<label>Username</label>
-<input name="username" class="form-control" required>
-</div>
-<div class="form-group">
-<label>Password</label>
-<input name="password" class="form-control" required>
-</div>
-<div class="form-check">
-<input type="checkbox" name="can_register" class="form-check-input" id="cr">
-<label class="form-check-label" for="cr">Can register students</label>
-</div>
-<div class="form-check">
-<input type="checkbox" name="can_verify_exit" class="form-check-input" id="cv">
-<label class="form-check-label" for="cv">Can verify exit</label>
-</div>
-<button class="btn btn-success mt-3">Create</button>
+<h3 class="form-title">Create Sub-Manager</h3>
+<form method="post" class="submanager-form">
+    <div class="form-group">
+        <label class="form-label">Username</label>
+        <input name="username" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-input" required>
+    </div>
+    <div class="form-check">
+        <input type="checkbox" name="can_register" class="form-checkbox" id="cr">
+        <label class="form-check-label" for="cr">Can register students</label>
+    </div>
+    <div class="form-check">
+        <input type="checkbox" name="can_verify_exit" class="form-checkbox" id="cv">
+        <label class="form-check-label" for="cv">Can verify exit</label>
+    </div>
+    <button type="submit" class="form-button">Create</button>
 </form>
 {% endblock %}
