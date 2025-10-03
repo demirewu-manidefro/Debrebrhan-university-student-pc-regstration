@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Miniver&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "poppins", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323232;
+    --main-color: #7cf03d;
+    --white-color: #fff;
+    --disabled-color: #fff3;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--white-color);
+    background: #c3dffbff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: #166534;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 2rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 1s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 4rem;
+    display: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 120px auto 20px auto;
+    /* push below header */
+    padding: 15px;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.alert-info {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+/* === Dashboard Jumbotron === */
+.jumbotron {
+    background: #ffffff;
+    padding: 4rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    margin-bottom: 4rem;
+}
+
+.jumbotron h1 {
+    color: #166534;
+    
+    font-size: 3rem;
+    font-weight: 1000;
+}
+
+.lead{
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.small-note {
+    font-size: 2rem;
+    color: #555;
+}
+
+/* === Dashboard Cards === */
+
+
+/* === Quick Actions & Search Containers === */
+.link,
+.search {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+.Quick_Actions{
+font-size: 2rem;
+}
+
+.link h5,
+.search h5 {
+    color: #166534;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    height: 100px;
+}
+
+/* === Buttons === */
+.btn-outline-primary {
+    color: #166534;
+    border: 2px solid #166534;
+    margin-right: 1.5rem;
+    border-radius: 8px;
+    padding: 2rem 3rem;
+    font-weight: 700;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #166534;
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    color: #444;
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #555;
+    border-color: #555;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #166534;
+    border: 2px solid #166534;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #14532d;
+    border-color: #14532d;
+}
+
+/* === Search Input === */
+.form-inline {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.form-control {
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0.45rem 0.75rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #166534;
+    box-shadow: 0 0 6px rgba(22, 101, 52, 0.3);
+}
+
+bro please make biger it is very small
+/* General body */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-search {
+    padding: 8px 14px;
+    background: #3498db;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background: #2980b9;
+}
+
+/* Table */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.student-table th,
+.student-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.student-table th {
+    background: #3498db;
+    color: white;
+    font-weight: 500;
+}
+
+.student-table tr:hover {
+    background: #f1f7ff;
+}
+
+/* Avatar */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar.placeholder {
+    width: 40px;
+    height: 40px;
+    background: #7f8c8d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #27ae60;
+}
+
+.btn-secondary {
+    background: #9b59b6;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #8e44ad;
+}
+
+.btn-outline {
+    border: 1px solid #3498db;
+    color: #3498db;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #3498db;
+    color: white;
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+/* Inline form for delete */
+.inline-form {
+    display: inline;
+}
+
+.text-muted {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+/* ===== Register Student Page Styles ===== */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef3f8;
+    padding: 20px;
+    color: #2d3436;
+}
+
+/* Form title */
+.form-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Main form container */
+.student-register-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Row layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+/* Column widths */
+.col-3 {
+    flex: 1 1 22%;
+}
+
+.col-4 {
+    flex: 1 1 30%;
+}
+
+.col-6 {
+    flex: 1 1 48%;
+}
+
+/* Input fields */
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.input-box {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.input-box:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* File upload */
+.file-upload {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Submit button */
+.btn-submit {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #3498db;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}

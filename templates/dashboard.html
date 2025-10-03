@@ -11,26 +11,19 @@
 </div>
 
 
-<div class="row">
-<div class="col-md-6">
-<div class="card mb-3">
-<div class="card-body">
-<h5>Quick Actions</h5>
+
+<div class="link">
+<h5 class ="Quick_Actions">Quick Actions</h5>
 <a class="btn btn-outline-primary" href="{{ url_for('register_student') }}">Register Student</a>
 <a class="btn btn-outline-secondary" href="{{ url_for('verify_exit') }}">Verify Exit</a>
 </div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="card mb-3">
-<div class="card-body">
-<h5>Search</h5>
+
+<div class="search">
+<h5 class="searchtext">Search</h5>
 <form action="{{ url_for('list_students') }}" method="get" class="form-inline">
 <input name="q" class="form-control mr-2" placeholder="Search by student ID or name">
 <button class="btn btn-primary">Search</button>
 </form>
 </div>
-</div>
-</div>
-</div>
+
 {% endblock %}
